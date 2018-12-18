@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat">
+    <item name="buttonStyle">@style/CustomButton</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="bottomSheetDialogTheme">@style/OrderSheetTheme</item>
+    <item name="editTextStyle">@style/CustomEditText</item>
+    <item name="android:windowBackground">@color/colorCookieActivityBackground</item>
+  </style>
+
+  <style name="AppTheme.CookieActivity">
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="sqip.Theme.CardEntry" parent="sqip.Theme.BaseCardEntry">
+    <item name="sqipSaveButtonText">@string/pay_button</item>
+    <item name="buttonStyle">@style/CardEntryButton</item>
+    <item name="android:windowBackground">@color/colorCardEntryBackground</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="editTextStyle">@style/CustomEditText</item>
+    <!-- Our theme button style has a text color to white,
+      which leads to the dialog Ok button having a white text on white background.
+     -->
+    <item name="android:alertDialogTheme">@style/Theme.AppCompat.Light.Dialog.Alert</item>
+    <item name="android:windowAnimationStyle">@style/CardEntryActivityAnimation</item>
+    <!-- Customizing the action bar icon. -->
+    <item name="android:homeAsUpIndicator">@drawable/card_entry_close</item>
+  </style>
+
+  <style name="OrderSheetTheme" parent="Theme.Design.Light.BottomSheetDialog">
+    <item name="bottomSheetStyle">@style/OrderSheet</item>
+  </style>
+</resources>

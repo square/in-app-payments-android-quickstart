@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer name="card_entry_activity_animation_duration_ms">300</integer>
+</resources>

@@ -1,0 +1,35 @@
+<resources>
+
+  <style name="CustomEditText" parent="@style/Widget.AppCompat.EditText">
+    <item name="android:textColor">@color/colorAccent</item>
+  </style>
+
+  <style name="CustomButton" parent="Widget.AppCompat.Button.Colored">
+    <item name="android:textColor">@color/color_button_text</item>
+    <item name="android:background">@drawable/button</item>
+    <item name="android:textAlignment">center</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:paddingLeft">@dimen/buttonHorizontalPadding</item>
+    <item name="android:paddingRight">@dimen/buttonHorizontalPadding</item>
+    <item name="android:paddingTop">@dimen/buttonVerticalPadding</item>
+    <item name="android:paddingBottom">@dimen/buttonVerticalPadding</item>
+    <item name="android:minWidth">@dimen/buttonMinWidth</item>
+    <item name="android:textSize">@dimen/buttonTextSize</item>
+  </style>
+
+  <style name="CardEntryButton" parent="CustomButton">
+    <item name="android:background">@drawable/card_entry_button</item>
+  </style>
+
+  <style name="OrderSheet" parent="Widget.Design.BottomSheet.Modal">
+    <item name="android:background">@drawable/sheet_background</item>
+  </style>
+
+  <style name="CardEntryActivityAnimation" parent="android:style/Animation.Activity">
+    <item name="android:activityOpenEnterAnimation">@anim/enter_from_bottom</item>
+    <item name="android:activityOpenExitAnimation">@anim/stay_put</item>
+    <item name="android:activityCloseEnterAnimation">@anim/stay_put</item>
+    <item name="android:activityCloseExitAnimation">@anim/exit_to_bottom</item>
+  </style>
+
+</resources>

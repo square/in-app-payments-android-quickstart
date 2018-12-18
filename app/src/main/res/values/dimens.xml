@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="buttonInset">8dp</dimen>
+  <dimen name="buttonRadius">32dp</dimen>
+  <dimen name="buttonHorizontalPadding">16dp</dimen>
+  <dimen name="buttonVerticalPadding">18dp</dimen>
+  <dimen name="buttonMinWidth">160dp</dimen>
+  <dimen name="buttonTextSize">18sp</dimen>
+  <dimen name="sheetRadius">12dp</dimen>
+  <dimen name="sheetPadding">8dp</dimen>
+  <dimen name="orderMargin">32dp</dimen>
+  <dimen name="sheetSeparatorHeight">1dp</dimen>
+  <dimen name="order_sheet_padding">8dp</dimen>
+  <dimen name="order_sheet_info_horizontal_padding">40dp</dimen>
+</resources>

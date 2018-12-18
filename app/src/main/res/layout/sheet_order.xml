@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/order_sheet_padding"
+      >
+
+    <ImageButton
+        android:id="@+id/close_sheet_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/button_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/place_your_order"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/close_sheet_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/close_sheet_button"
+        />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_info_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/order_sheet_info_horizontal_padding"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_info_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/order_sheet_info_horizontal_padding"
+        />
+
+
+    <TextView
+        android:id="@+id/ship_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="32dp"
+        android:text="@string/ship_to"
+        android:textColor="@color/colorSheetLabel"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/left_info_guide"
+        app:layout_constraintTop_toBottomOf="@id/close_sheet_button"
+        />
+
+
+    <android.support.constraint.Barrier
+        android:id="@+id/column_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="ship_to, total"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lauren_nobel"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/right_info_guide"
+        app:layout_constraintStart_toEndOf="@id/column_separator"
+        app:layout_constraintTop_toTopOf="@id/ship_to"
+        />
+
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/address"
+        android:textColor="@color/colorSheetInfo"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/right_info_guide"
+        app:layout_constraintStart_toEndOf="@id/column_separator"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        />
+
+    <View
+        android:id="@+id/ship_separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sheetSeparatorHeight"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorSheetSeparator"
+        app:layout_constraintEnd_toStartOf="@id/right_info_guide"
+        app:layout_constraintStart_toStartOf="@id/left_info_guide"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingEnd="32dp"
+        android:text="@string/total"
+        android:textColor="@color/colorSheetLabel"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/left_info_guide"
+        app:layout_constraintTop_toBottomOf="@+id/ship_separator"
+        />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/price"
+        android:textColor="@color/colorSheetValue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/right_info_guide"
+        app:layout_constraintStart_toEndOf="@id/column_separator"
+        app:layout_constraintTop_toBottomOf="@+id/ship_separator"
+        />
+
+    <View
+        android:id="@+id/price_separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/sheetSeparatorHeight"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorSheetSeparator"
+        app:layout_constraintEnd_toStartOf="@id/right_info_guide"
+        app:layout_constraintStart_toStartOf="@id/left_info_guide"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        />
+
+
+    <TextView
+        android:id="@+id/refund"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/refund_helper_text"
+        android:textColor="@color/colorSheetInfo"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/right_info_guide"
+        app:layout_constraintStart_toEndOf="@id/left_info_guide"
+        app:layout_constraintTop_toBottomOf="@+id/price_separator"
+        />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/button_middle_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <Button
+        android:id="@+id/pay_with_card_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/pay_with_card"
+        app:layout_constraintEnd_toStartOf="@id/button_middle_guide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/refund"
+        />
+
+    <ImageButton
+        android:id="@+id/pay_with_google_button"
+        style="@style/CustomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/google_pay_button"
+        android:enabled="false"
+        android:src="@drawable/google_pay_logo_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_middle_guide"
+        app:layout_constraintTop_toTopOf="@id/pay_with_card_button"
+        />
+  </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
