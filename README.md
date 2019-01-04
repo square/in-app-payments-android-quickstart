@@ -1,6 +1,6 @@
 #  In-App Payments Quick Start Sample Android Application
 
-Follow the In-App Payments Quick Start Guide to take payments in an app running on a buyer's personal mobile device.
+Follow the [In-App Payments Quick Start Guide](https://docs.connect.squareup.com/payments/in-app-payments-sdk/quickstart/start) to take payments in an app running on a buyer's personal mobile device.
 
 ## License
 
