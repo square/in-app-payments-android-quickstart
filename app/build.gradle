@@ -36,8 +36,8 @@ dependencies {
   def inAppPaymentsSdkVersion = '1.0.3'
   implementation "com.squareup.sdk.in-app-payments:card-entry:$inAppPaymentsSdkVersion"
   implementation "com.squareup.sdk.in-app-payments:google-pay:$inAppPaymentsSdkVersion"
-  implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-  implementation 'com.squareup.retrofit2:converter-moshi:2.4.0'
+  implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+  implementation 'com.squareup.retrofit2:converter-moshi:2.5.0'
   def supportLibraryVersion = '27.1.1'
   implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
   implementation "com.android.support:design:$supportLibraryVersion"
