@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-  def inAppPaymentsSdkVersion = '1.0.3'
+  def inAppPaymentsSdkVersion = '1.1.0'
   implementation "com.squareup.sdk.in-app-payments:card-entry:$inAppPaymentsSdkVersion"
   implementation "com.squareup.sdk.in-app-payments:google-pay:$inAppPaymentsSdkVersion"
   implementation 'com.squareup.retrofit2:retrofit:2.5.0'
