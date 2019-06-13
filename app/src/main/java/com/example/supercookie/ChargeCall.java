@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import okhttp3.ResponseBody;
-import org.jetbrains.annotations.NotNull;
 import retrofit2.Callback;
 import retrofit2.Converter;
 import retrofit2.Response;
@@ -105,7 +104,7 @@ public class ChargeCall implements Call<ChargeResult> {
     return call.isCanceled();
   }
 
-  @NotNull
+  @NonNull
   @Override
   public Call<ChargeResult> clone() {
     return factory.create(nonce);
