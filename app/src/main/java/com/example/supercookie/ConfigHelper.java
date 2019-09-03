@@ -23,7 +23,7 @@ public class ConfigHelper {
     String uuid = UUID.randomUUID().toString();
     Log.d("ExampleApplication",
         "Run this curl command to charge the nonce:\n"
-            + "curl --request POST https://connect.squareup.com/v2/locations/SQUARE_LOCATION_ID_FOR_GOOGLE_PAY/transactions \\\n"
+            + "curl --request POST https://connect.squareup.com/v2/payments \\\n"
             + "--header \"Content-Type: application/json\" \\\n"
             + "--header \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \\\n"
             + "--header \"Accept: application/json\" \\\n"
@@ -32,7 +32,7 @@ public class ConfigHelper {
             + "\"amount_money\": {\n"
             + "\"amount\": 100,\n"
             + "\"currency\": \"USD\"},\n"
-            + "\"card_nonce\": \"" + nonce + "\""
+            + "\"source_id\": \"" + nonce + "\""
             + "}\'");
   }
 
