@@ -18,11 +18,10 @@
   <string name="network_failure_title">Network Error</string>
   <string name="refund_helper_text">You can refund this transaction through your Square dashboard, go to squareup.com/dashboard.</string>
   <string name="pay_with_card">Pay with card</string>
-  <string name="location_id_not_replaced">CookieActivity.SQUARE_LOCATION_ID should be set to Square Location ID</string>
   <string name="missing_application_id_title">Missing Square Application ID</string>
   <string name="missing_application_id_message"><![CDATA[Please update <b>sqip.SQUARE_APPLICATION_ID</b> in <b>AndroidManifest.xml</b> if you want to be able to create a nonce.]]></string>
   <string name="server_host_not_set_title">Nonce generated but not charged</string>
   <string name="server_host_not_set_message"><![CDATA[Check logcat for a CURL command to charge the nonce, or replace <b>CookieConfig.CHARGE_SERVER_HOST</b> with your server host.]]></string>
-  <string name="square_location_id_not_set_title">Missing Square Location ID</string>
-  <string name="square_location_id_not_set_message"><![CDATA[To request a Google Pay nonce, replace <b>CookieConfig.SQUARE_LOCATION_ID_FOR_GOOGLE_PAY</b> with a Square Location ID.]]></string>
+  <string name="merchant_id_not_set_title">Missing Google Pay Merchant ID</string>
+  <string name="merchant_id_not_set_message"><![CDATA[To request a Google Pay nonce, replace <b>CookieConfig.GOOGLE_PAY_MERCHANT_ID</b> with your Google Pay Merchant ID.]]></string>
 </resources>
