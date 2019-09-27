@@ -16,7 +16,7 @@
   <string name="price">$1.00</string>
   <string name="refund_helper_text">You can refund this transaction through your Square dashboard, go to squareup.com/dashboard.</string>
   <string name="retry">Retry</string>
-  <string name="server_host_not_set_message"><![CDATA[Check logcat for a CURL command to charge the nonce, or replace <b>ConfigHelper.CHARGE_SERVER_HOST</b> with your server host.]]></string>
+  <string name="server_host_not_set_message"><![CDATA[Check logcat <b>Info</b> messages for a CURL command to charge the nonce, or replace <b>ConfigHelper.CHARGE_SERVER_HOST</b> with your server host.]]></string>
   <string name="server_host_not_set_title">Nonce generated but not charged</string>
   <string name="ship_to">Ship to</string>
   <string name="successful_order_message">Go to your Square dashboard to see this order reflected in the sales tab.</string>

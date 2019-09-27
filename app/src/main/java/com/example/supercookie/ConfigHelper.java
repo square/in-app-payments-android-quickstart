@@ -21,7 +21,7 @@ public class ConfigHelper {
 
   public static void printCurlCommand(String nonce) {
     String uuid = UUID.randomUUID().toString();
-    Log.d("ExampleApplication",
+    Log.i("ExampleApplication",
         "Run this curl command to charge the nonce:\n"
             + "curl --request POST https://connect.squareupsandbox.com/v2/payments \\\n"
             + "--header \"Content-Type: application/json\" \\\n"
