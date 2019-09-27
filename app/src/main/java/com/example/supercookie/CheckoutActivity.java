@@ -87,7 +87,7 @@ public class CheckoutActivity extends AppCompatActivity {
         .build();
 
     PaymentDataRequest paymentDataRequest =
-        GooglePay.createPaymentDataRequest(ConfigHelper.SQUARE_LOCATION_ID_FOR_GOOGLE_PAY,
+        GooglePay.createPaymentDataRequest(ConfigHelper.GOOGLE_PAY_MERCHANT_ID,
             transactionInfo);
 
     Task<PaymentData> googlePayActivityTask = paymentsClient.loadPaymentData(paymentDataRequest);
@@ -130,8 +130,8 @@ public class CheckoutActivity extends AppCompatActivity {
 
   private void handleGooglePayActivityResult(int resultCode, Intent data) {
     if (resultCode == RESULT_OK) {
-      if (!ConfigHelper.squareLocationIdSet()) {
-        showSquareLocationIdNotSet();
+      if (!ConfigHelper.merchantIdSet()) {
+        showMerchantIdNotSet();
         return;
       }
       PaymentData paymentData = PaymentData.getFromIntent(data);
@@ -166,8 +166,8 @@ public class CheckoutActivity extends AppCompatActivity {
     showOkDialog(R.string.server_host_not_set_title, Html.fromHtml(getString(R.string.server_host_not_set_message)));
   }
 
-  private void showSquareLocationIdNotSet() {
-    showOkDialog(R.string.square_location_id_not_set_title, Html.fromHtml(getString(R.string.square_location_id_not_set_message)));
+  private void showMerchantIdNotSet() {
+    showOkDialog(R.string.merchant_id_not_set_title, Html.fromHtml(getString(R.string.merchant_id_not_set_message)));
   }
 
   private void showOkDialog(int titleResId, CharSequence message) {

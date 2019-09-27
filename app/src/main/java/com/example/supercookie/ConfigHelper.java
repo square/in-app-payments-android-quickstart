@@ -7,7 +7,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory;
 
 public class ConfigHelper {
 
-  public static final String SQUARE_LOCATION_ID_FOR_GOOGLE_PAY = "REPLACE_ME";
+  public static final String GOOGLE_PAY_MERCHANT_ID = "REPLACE_ME";
   private static final String CHARGE_SERVER_HOST = "REPLACE_ME";
   private static final String CHARGE_SERVER_URL = "https://" + CHARGE_SERVER_HOST + "/";
 
@@ -15,15 +15,15 @@ public class ConfigHelper {
     return !CHARGE_SERVER_HOST.equals("REPLACE_ME");
   }
 
-  public static boolean squareLocationIdSet() {
-    return !SQUARE_LOCATION_ID_FOR_GOOGLE_PAY.equals("REPLACE_ME");
+  public static boolean merchantIdSet() {
+    return !GOOGLE_PAY_MERCHANT_ID.equals("REPLACE_ME");
   }
 
   public static void printCurlCommand(String nonce) {
     String uuid = UUID.randomUUID().toString();
-    Log.d("ExampleApplication",
+    Log.i("ExampleApplication",
         "Run this curl command to charge the nonce:\n"
-            + "curl --request POST https://connect.squareup.com/v2/locations/SQUARE_LOCATION_ID_FOR_GOOGLE_PAY/transactions \\\n"
+            + "curl --request POST https://connect.squareupsandbox.com/v2/payments \\\n"
             + "--header \"Content-Type: application/json\" \\\n"
             + "--header \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \\\n"
             + "--header \"Accept: application/json\" \\\n"
@@ -32,7 +32,7 @@ public class ConfigHelper {
             + "\"amount_money\": {\n"
             + "\"amount\": 100,\n"
             + "\"currency\": \"USD\"},\n"
-            + "\"card_nonce\": \"" + nonce + "\""
+            + "\"source_id\": \"" + nonce + "\""
             + "}\'");
   }
 
