@@ -2,12 +2,12 @@
 
 Follow the [In-App Payments Quick Start Guide](https://docs.connect.squareup.com/payments/in-app-payments-sdk/quickstart/start) to take payments in an app running on a buyer's personal mobile device.
 
-**Note:** When testing the quick start in the Square Sandbox, be sure to use the [Sandbox test values])(https://developer.squareup.com/docs/testing/test-values#successstates)
+**Note:** When testing the quick start in the Square Sandbox, be sure to use the [Sandbox test values](https://developer.squareup.com/docs/testing/test-values#successstates)
 when you input a payment card in the **Card Entry** form.
 
 ## License
 
-Copyright 2018 Square, Inc.
+Copyright 2019 Square, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
