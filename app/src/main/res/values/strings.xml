@@ -4,7 +4,7 @@
   <string name="buy_button">Buy</string>
   <string name="description">Instantly gain special powers when ordering a super cookie</string>
   <string name="lauren_nobel">Lauren Nobel</string>
-  <string name="merchant_id_not_set_message"><![CDATA[To request a Google Pay nonce, replace <b>CookieConfig.GOOGLE_PAY_MERCHANT_ID</b> with your Google Pay Merchant ID.]]></string>
+  <string name="merchant_id_not_set_message"><![CDATA[To request a Google Pay nonce, replace <b>ConfigHelper.GOOGLE_PAY_MERCHANT_ID</b> with your Google Pay Merchant ID.]]></string>
   <string name="merchant_id_not_set_title">Missing Google Pay Merchant ID</string>
   <string name="missing_application_id_message"><![CDATA[Please update <b>sqip.SQUARE_APPLICATION_ID</b> in <b>AndroidManifest.xml</b> if you want to be able to create a nonce.]]></string>
   <string name="missing_application_id_title">Missing Square Application ID</string>
