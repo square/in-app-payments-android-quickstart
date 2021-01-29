@@ -1,6 +1,9 @@
 package com.example.supercookie;
 
 import android.util.Log;
+
+import com.squareup.moshi.Moshi;
+
 import java.util.UUID;
 import retrofit2.Retrofit;
 import retrofit2.converter.moshi.MoshiConverterFactory;
@@ -37,10 +40,11 @@ public class ConfigHelper {
   }
 
   public static Retrofit createRetrofitInstance() {
+    Moshi moshi = new Moshi.Builder().build();
     return new Retrofit
-        .Builder()
-        .baseUrl(ConfigHelper.CHARGE_SERVER_URL)
-        .addConverterFactory(MoshiConverterFactory.create())
-        .build();
+            .Builder()
+            .baseUrl(ConfigHelper.CHARGE_SERVER_URL)
+            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .build();
   }
 }
