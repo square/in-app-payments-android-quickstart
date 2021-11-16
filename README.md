@@ -22,4 +22,4 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ## Feedback
-Leave a feedback for this sample app [here](https://delighted.com/t/DT6msOcY)!
+Rate this sample app [here](https://delighted.com/t/Z1xmKSqy)!
