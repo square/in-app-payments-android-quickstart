@@ -8,9 +8,12 @@ import sqip.GooglePayNonceResult;
 public class GooglePayChargeClient {
   private final ChargeCall.Factory chargeCallFactory;
 
-  @Nullable private CheckoutActivity activity;
-  @Nullable private Call<GooglePayNonceResult> requestNonceCall;
-  @Nullable private Call<ChargeResult> chargeCall;
+  @Nullable
+  private CheckoutActivity activity;
+  @Nullable
+  private Call<GooglePayNonceResult> requestNonceCall;
+  @Nullable
+  private Call<ChargeResult> chargeCall;
 
   GooglePayChargeClient(ChargeCall.Factory chargeCallFactory) {
     this.chargeCallFactory = chargeCallFactory;
@@ -20,7 +23,7 @@ public class GooglePayChargeClient {
     if (nonceRequestInFlight() || chargeRequestInFlight()) {
       return;
     }
-    requestNonceCall = GooglePay.requestGooglePayNonce(googlePayToken);
+    requestNonceCall = GooglePay.requestGooglePayNonce(PaymentData);
     requestNonceCall.enqueue(result -> onNonceRequestResult(googlePayToken, result));
   }
 
