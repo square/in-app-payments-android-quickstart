@@ -5,6 +5,8 @@ import android.util.Log;
 import com.squareup.moshi.Moshi;
 
 import java.util.UUID;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.moshi.MoshiConverterFactory;
 
@@ -43,10 +45,15 @@ public class ConfigHelper {
 
   public static Retrofit createRetrofitInstance() {
     Moshi moshi = new Moshi.Builder().build();
+    HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+    interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
     return new Retrofit
-            .Builder()
-            .baseUrl(ConfigHelper.CHARGE_SERVER_URL)
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
-            .build();
+        .Builder()
+        .client(new OkHttpClient.Builder()
+            .addInterceptor(interceptor)
+            .build())
+        .baseUrl(ConfigHelper.CHARGE_SERVER_URL)
+        .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .build();
   }
 }
