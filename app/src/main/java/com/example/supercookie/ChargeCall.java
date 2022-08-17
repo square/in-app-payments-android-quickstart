@@ -79,7 +79,11 @@ public class ChargeCall implements Call<ChargeResult> {
       //noinspection ConstantConditions
       ResponseBody errorBody = response.errorBody();
       ChargeService.ChargeErrorResponse errorResponse = factory.errorConverter.convert(errorBody);
-      return ChargeResult.error(errorResponse.errorMessage);
+      if (errorResponse != null && errorResponse.errorMessage != null) {
+        return ChargeResult.error(errorResponse.errorMessage);
+      } else {
+        return ChargeResult.networkError();
+      }
     } catch (IOException exception) {
       if (BuildConfig.DEBUG) {
         Log.d("ChargeCall", "Error while parsing error response: " + response.toString(),
