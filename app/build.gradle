@@ -46,7 +46,7 @@ dependencies {
   implementation 'com.squareup.retrofit2:retrofit:2.9.0'
   implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
 
-  def inAppPaymentsSdkVersion = '1.5.7'
+  def inAppPaymentsSdkVersion = '1.5.8'
   implementation "com.squareup.sdk.in-app-payments:card-entry:$inAppPaymentsSdkVersion"
   implementation "com.squareup.sdk.in-app-payments:google-pay:$inAppPaymentsSdkVersion"
 
