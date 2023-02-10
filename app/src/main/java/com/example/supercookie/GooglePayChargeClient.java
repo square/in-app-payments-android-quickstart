@@ -23,7 +23,7 @@ public class GooglePayChargeClient {
     if (nonceRequestInFlight() || chargeRequestInFlight()) {
       return;
     }
-    requestNonceCall = GooglePay.requestGooglePayNonce(PaymentData);
+    requestNonceCall = GooglePay.requestGooglePayNonce(googlePayToken);
     requestNonceCall.enqueue(result -> onNonceRequestResult(googlePayToken, result));
   }
 
