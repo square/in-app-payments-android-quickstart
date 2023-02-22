@@ -18,7 +18,8 @@
 
     <activity
         android:name=".CheckoutActivity"
-        android:theme="@style/AppTheme.CookieActivity">
+        android:theme="@style/AppTheme.CookieActivity"
+        android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 

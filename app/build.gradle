@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-  compileSdkVersion 32
+  compileSdkVersion 33
   defaultConfig {
     applicationId "com.example.supercookie"
     minSdkVersion 24
@@ -35,9 +35,9 @@ repositories {
 }
 
 dependencies {
-  implementation "androidx.appcompat:appcompat:1.5.0"
+  implementation "androidx.appcompat:appcompat:1.6.1"
   implementation "androidx.constraintlayout:constraintlayout:2.1.4"
-  implementation "com.google.android.material:material:1.6.1"
+  implementation "com.google.android.material:material:1.8.0"
   // Play Services Wallet 16.0.1 was published with dependencies on maps & identities 16.0.0.
   implementation 'com.google.android.gms:play-services-wallet:19.1.0'
   implementation "com.squareup.moshi:moshi-adapters:1.13.0"
@@ -46,7 +46,7 @@ dependencies {
   implementation 'com.squareup.retrofit2:retrofit:2.9.0'
   implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
 
-  def inAppPaymentsSdkVersion = '1.6.0'
+  def inAppPaymentsSdkVersion = '1.6.1'
   implementation "com.squareup.sdk.in-app-payments:card-entry:$inAppPaymentsSdkVersion"
   implementation "com.squareup.sdk.in-app-payments:google-pay:$inAppPaymentsSdkVersion"
 
