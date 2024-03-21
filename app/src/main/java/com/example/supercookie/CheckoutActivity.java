@@ -98,7 +98,7 @@ public class CheckoutActivity extends AppCompatActivity {
   }
 
   private void showMissingSquareApplicationIdDialog() {
-    new AlertDialog.Builder(this, R.style.Theme_AppCompat_Light_Dialog_Alert)
+    new AlertDialog.Builder(this, androidx.appcompat.R.style.Theme_AppCompat_Light_Dialog_Alert)
         .setTitle(R.string.missing_application_id_title)
         .setMessage(Html.fromHtml(getString(R.string.missing_application_id_message)))
         .setPositiveButton(android.R.string.ok, (dialog, which) -> showOrderSheet())
@@ -174,7 +174,7 @@ public class CheckoutActivity extends AppCompatActivity {
   }
 
   private void showOkDialog(int titleResId, CharSequence message) {
-    new AlertDialog.Builder(this, R.style.Theme_AppCompat_Light_Dialog_Alert)
+    new AlertDialog.Builder(this, androidx.appcompat.R.style.Theme_AppCompat_Light_Dialog_Alert)
         .setTitle(titleResId)
         .setMessage(message)
         .setPositiveButton(android.R.string.ok, null)
@@ -182,7 +182,7 @@ public class CheckoutActivity extends AppCompatActivity {
   }
 
   public void showNetworkErrorRetryPayment(Runnable retry) {
-    new AlertDialog.Builder(this, R.style.Theme_AppCompat_Light_Dialog_Alert)
+    new AlertDialog.Builder(this, androidx.appcompat.R.style.Theme_AppCompat_Light_Dialog_Alert)
         .setTitle(R.string.network_failure_title)
         .setMessage(getString(R.string.network_failure))
         .setPositiveButton(R.string.retry, (dialog, which) -> retry.run())
