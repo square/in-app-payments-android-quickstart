@@ -1,5 +1,9 @@
 #  In-App Payments Quick Start Sample Android Application
 
+## Supported SDK version
+
+* In-App Payments SDK: `1.6.8`
+
 Follow the [In-App Payments Quick Start Guide](https://docs.connect.squareup.com/payments/in-app-payments-sdk/quickstart/start) to take payments in an app running on a buyer's personal mobile device.
 
 **Note:** When testing the quick start in the Square Sandbox, be sure to use the [Sandbox test values](https://developer.squareup.com/docs/testing/test-values#successstates)
