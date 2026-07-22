@@ -51,5 +51,13 @@
         android:text="@string/buy_button"
         />
 
+    <Button
+        android:id="@+id/verify_button"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_button"
+        />
+
   </LinearLayout>
 </ScrollView>

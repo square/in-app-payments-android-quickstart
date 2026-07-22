@@ -13,11 +13,17 @@ import retrofit2.converter.moshi.MoshiConverterFactory;
 public class ConfigHelper {
 
   public static final String GOOGLE_PAY_MERCHANT_ID = "REPLACE_ME";
+  // Location ID matching sqip.SQUARE_APPLICATION_ID, used for buyer verification.
+  public static final String SQUARE_LOCATION_ID = "REPLACE_ME";
   private static final String CHARGE_SERVER_HOST = "REPLACE_ME";
   private static final String CHARGE_SERVER_URL = "https://" + CHARGE_SERVER_HOST + "/";
 
   public static boolean serverHostSet() {
     return !CHARGE_SERVER_HOST.equals("REPLACE_ME");
+  }
+
+  public static boolean locationIdSet() {
+    return !SQUARE_LOCATION_ID.equals("REPLACE_ME");
   }
 
   public static boolean merchantIdSet() {

@@ -24,4 +24,9 @@
   <string name="super_cookie">Super Cookie</string>
   <string name="total">Total</string>
   <string name="unsuccessful_order">Your order was not successful</string>
+  <string name="verify_button">Verify</string>
+  <string name="verification_success_title">Buyer verification succeeded</string>
+  <string name="verification_error_title">Buyer verification failed</string>
+  <string name="location_id_not_set_title">Missing Square Location ID</string>
+  <string name="location_id_not_set_message"><![CDATA[To verify a buyer, replace <b>ConfigHelper.SQUARE_LOCATION_ID</b> with a location ID matching your Square Application ID.]]></string>
 </resources>
