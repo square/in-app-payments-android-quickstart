@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-  compileSdk = 34
+  compileSdk = 36
   namespace = "com.example.supercookie"
   buildFeatures {
     buildConfig = true
@@ -11,7 +11,7 @@ android {
   defaultConfig {
     applicationId "com.example.supercookie"
     minSdkVersion 28
-    targetSdkVersion 33
+    targetSdkVersion 36
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -26,6 +26,12 @@ android {
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_17
     targetCompatibility JavaVersion.VERSION_17
+  }
+
+  packagingOptions {
+    resources {
+      excludes += 'META-INF/versions/9/OSGI-INF/MANIFEST.MF'
+    }
   }
 }
 
@@ -50,9 +56,10 @@ dependencies {
   implementation 'com.squareup.retrofit2:retrofit:2.9.0'
   implementation 'com.squareup.okhttp3:logging-interceptor:4.5.0'
 
-  def inAppPaymentsSdkVersion = '1.6.8'
+  def inAppPaymentsSdkVersion = '1.6.9'
   implementation "com.squareup.sdk.in-app-payments:card-entry:$inAppPaymentsSdkVersion"
   implementation "com.squareup.sdk.in-app-payments:google-pay:$inAppPaymentsSdkVersion"
+  implementation "com.squareup.sdk.in-app-payments:buyer-verification:$inAppPaymentsSdkVersion"
 
   androidTestImplementation 'androidx.test:runner:1.4.0'
 }
